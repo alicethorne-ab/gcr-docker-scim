@@ -1,0 +1,24 @@
+{
+    "name": "op-scim",
+    "env": {
+        "OP_SESSION": {
+            "description": "scimsession file path",
+            "value": "/secret/scimsession",
+            "required": true
+        }
+    },
+    "options": {
+        "allow-unauthenticated": true,
+        "memory": "512Mi",
+        "cpu": "1",
+        "port": 3002,
+        "http2": false
+    },
+    "hooks": {
+        "prebuild": {
+            "commands": [
+                "./scimsession-prompt.sh"
+            ]
+        }
+    }
+}
