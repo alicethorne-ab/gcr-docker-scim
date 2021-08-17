@@ -5,7 +5,6 @@ USER root
 RUN apt update && apt install redis-server -y
 
 COPY ./entrypoint.sh /entrypoint.sh
-COPY ./scimsession /secret/scimsession
 
 RUN chmod +x /entrypoint.sh
 

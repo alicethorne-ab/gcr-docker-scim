@@ -2,8 +2,8 @@
     "name": "op-scim",
     "env": {
         "OP_SESSION": {
-            "description": "scimsession file path",
-            "value": "/secret/scimsession",
+            "description": "Input your `scimsession` file base64-encoded string here",
+            "value": "",
             "required": true
         }
     },
@@ -13,12 +13,5 @@
         "cpu": "1",
         "port": 3002,
         "http2": false
-    },
-    "hooks": {
-        "prebuild": {
-            "commands": [
-                "./scimsession-prompt.sh"
-            ]
-        }
     }
 }
